@@ -592,7 +592,7 @@ ssize_t proc_set_survey_info(struct file *file, const char __user *buffer, size_
 #ifdef CONFIG_MP_INCLUDED
 		if (padapter->registrypriv.mp_mode == 1
 #ifdef CONFIG_CONCURRENT_MODE
-		|| padapter->pbuddy_adapter && padapter->pbuddy_adapter->registrypriv.mp_mode == 1
+		|| ( padapter->pbuddy_adapter && padapter->pbuddy_adapter->registrypriv.mp_mode == 1 )
 #endif			
 		){
 			DBG_871X(FUNC_ADPT_FMT ": MP mode block Scan request\n", FUNC_ADPT_ARG(padapter));
